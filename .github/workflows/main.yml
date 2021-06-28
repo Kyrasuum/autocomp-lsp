@@ -35,7 +35,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: Kyrasuum
-        - name: Zip Folder
-          run: zip -r release.zip . -x ".git/*" ".github/*"
-        - name: Release to Github
-          run: echo "Release"
