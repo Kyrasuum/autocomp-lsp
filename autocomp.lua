@@ -14,5 +14,8 @@ function AutoCompleteC(Buff){
 
 function init()
     config.AddRuntimeFile("autocomp", config.RTHelp, "help/autocomp-lsp.md")
-    buffer.TryBindAutocomplete("Autocomp-lsp", "C", "AutoCompleteC")
+    buffer.TryBindAutocomplete("autocomp-lsp", "C", "AutoCompleteC")
+    buffer.TryBindAutocomplete("autocomp-lsp", "c", "AutoCompleteC")
+    buffer.TryBindAutocomplete("autocomp-lsp", "c++", "AutoCompleteC")
+    buffer.TryBindAutocomplete("autocomp-lsp", "lua", "AutoCompleteC")
 end

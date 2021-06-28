@@ -1,12 +1,12 @@
 [{
-  "Name": "Autocomp-lsp",
+  "Name": "autocomp-lsp",
   "Description": "Autocomplete for micro using LSP",
   "Website": "https://github.com/Kyrasuum/autocomp-lsp",
   "Tags": ["python", "autocompletion"],
   "Versions": [
     {
-      "Version": "0.1.0",
-      "Url": "https://github.com/Kyrasuum/autocomp-lsp/archive/0.1.0.zip",
+      "Version": "0.3.0",
+      "Url": "https://github.com/Kyrasuum/autocomp-lsp/archive/0.3.0.zip",
       "Require": {
         "micro": ">=1.0.3"
       }
