@@ -6,5 +6,5 @@ repo: https://github.com/Kyrasuum/autocomp-lsp
 this plugin makes use of other people works from following urls
 
 utilized resources:
-* https://github.com/PurpleMyst/sansio-lsp-client
+* https://github.com/pappasam/jedi-language-server
 * https://stackoverflow.com/questions/20400390/how-to-call-a-python-function-from-lua

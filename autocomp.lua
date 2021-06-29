@@ -1,4 +1,4 @@
-VERSION = "3.5.0"
+VERSION = "0.3.0"
 
 local micro = import("micro")
 local config = import("micro/config")
@@ -7,15 +7,28 @@ local buffer = import("micro/buffer")
 local os = import("os")
 local ospath = import("os.path")
 local filepath = import("path/filepath")
+local py = require 'python'
+local content_completion = py.import "lsp/translate".content_completion
 
-function AutoCompleteC(Buff){
-    return "test1\ntest2\ntest3", "test1\ntest2\ntest3"
-}
+
+function AutoCompletePython(Buff)
+    contents = "'''Test file for test_completion.'''
+    
+    
+    def my_function():
+        '''Simple test function.'''
+        return 1
+    
+    
+    my
+    "
+    line = 8
+    col = 2
+    results = content_completion("/home/phillip/.config/micro/plug/autocomp-lsp/lsp/test_data.py", contents, line, col)
+    return results, results
+end
 
 function init()
     config.AddRuntimeFile("autocomp", config.RTHelp, "help/autocomp-lsp.md")
-    buffer.TryBindAutocomplete("autocomp-lsp", "C", "AutoCompleteC")
-    buffer.TryBindAutocomplete("autocomp-lsp", "c", "AutoCompleteC")
-    buffer.TryBindAutocomplete("autocomp-lsp", "c++", "AutoCompleteC")
-    buffer.TryBindAutocomplete("autocomp-lsp", "lua", "AutoCompleteC")
+    buffer.TryBindAutocomplete("autocomp-lsp", "python", "AutoCompletePython")
 end
