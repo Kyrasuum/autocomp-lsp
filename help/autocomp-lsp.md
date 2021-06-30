@@ -7,4 +7,4 @@ this plugin makes use of other people works from following urls
 
 utilized resources:
 * https://github.com/pappasam/jedi-language-server
-* https://stackoverflow.com/questions/20400390/how-to-call-a-python-function-from-lua
+* https://gist.github.com/tylerneylon/59f4bcf316be525b30ab
